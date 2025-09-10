@@ -6,28 +6,42 @@ public class Programa {
     private Integer nucleos;
     private Integer quantidadeOperacoes;
 
-public Programa(Integer memoriaRAMAlocada, Integer SSDOcupado, Integer nucleos, Integer quantidadeOperacoes){
-    this.memoriaRAMAlocada = memoriaRAMAlocada; 
-    this.SSDOcupado = SSDOcupado;
-    this.nucleos = nucleos;
-    this.quantidadeOperacoes = quantidadeOperacoes; 
-}
-
-public void tempoExecucao(Integer nucleos, Integer quantidadeOperacoes, Integer Nucleos, Float operacoesPorSegundo){ 
-    Integer tempo = quantidadeOperacoes / (int) (operacoesPorSegundo * Nucleos); 
-}
-
-public void executarPrograma(Integer memoriaRAMAlocada, Integer SSDOcupado, Integer nucleos, Integer quantidadeOperacoes,
-Integer memoriaRAM, Integer SSD, Integer Nucleos, Float operacoesPorSegundo){
-    if(SSDOcupado > SSD){
-        System.out.println("Erro na instalação do programa! ");
+    public Programa(Integer memoriaRAMAlocada, Integer SSDOcupado, Integer nucleos, Integer quantidadeOperacoes){
+        this.memoriaRAMAlocada = memoriaRAMAlocada; 
+        this.SSDOcupado = SSDOcupado;
+        this.nucleos = nucleos;
+        this.quantidadeOperacoes = quantidadeOperacoes; 
     }
-    if(memoriaRAMAlocada > memoriaRAM){
-        System.out.println("Erro na execução do programa! "); 
-    } else {
-        System.out.println("Programa executado com sucesso! ");
-        System.out.println("Tempo de execução: " + Tempo);
+
+    public Integer getmemoriaRAMAlocada(){
+        return memoriaRAMAlocada;
     }
-       
-}
+
+    public void setmemoriaRAMAlocada(Integer memoriaRAMAlocada){
+        this.memoriaRAMAlocada = memoriaRAMAlocada;
+    }
+
+    public Integer getSSDOcupado(){
+        return SSDOcupado;
+    }
+
+    public void setSSDOcupado(Integer SSDOcupado){
+        this.SSDOcupado = SSDOcupado; 
+    }
+
+    public Integer getnucleos(){
+        return nucleos;
+    }
+
+    public void setnucleos(Integer nucleos){
+        this.nucleos = nucleos;
+    }
+    
+    public Integer getquantidadeOperacoes(){
+        return quantidadeOperacoes;
+    }
+
+    public void setquantidadeOperacoes(Integer quantidadeOperacoes){
+        this.quantidadeOperacoes = quantidadeOperacoes;
+    }
 }
